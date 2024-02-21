@@ -1,6 +1,8 @@
 package Libro;
  class Main {
     public static void main(String[] args) {
+        System.out.println("Stock libreria Ramirez");
+        System.out.println();
         
         Libro primerLibro=new Libro();
 
