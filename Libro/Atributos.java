@@ -10,12 +10,6 @@ class Libro {
         autor="Diego Alexis";
         anoPublicacion= 2005;
     }
-    
-    void mostrarInfo(){
-        System.out.println("Titulo: "+titulo);
-        System.out.println("Autor: "+autor);
-        System.out.println("Ano de publicacion: "+anoPublicacion);
-    }
 
 
 }

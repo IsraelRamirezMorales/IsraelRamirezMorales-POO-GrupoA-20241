@@ -10,7 +10,9 @@ package Libro;
 
         System.out.println("Informacion del 1er libro: ");
         
-        primerLibro.mostrarInfo();
+        System.out.println("Titulo: "+primerLibro.titulo);
+        System.out.println("Autor: "+primerLibro.autor);
+        System.out.println("Ano de publicacion: "+primerLibro.anoPublicacion);;
         System.out.println();
 
         System.out.println("-------------------");
@@ -50,6 +52,20 @@ package Libro;
         System.out.println("Autor: "+cuartoLibro.autor);
         System.out.println("Ano de publicacion: "+cuartoLibro.anoPublicacion);
         System.out.println("-------------------");
+
+        Libro quintoLibro=new Libro();
+
+        quintoLibro.titulo="Noches estrelladas";
+        quintoLibro.autor="Jack Grealish";
+        quintoLibro.anoPublicacion=1905;
+
+        System.out.println("Informacion del 5to libro: ");
+        System.out.println("Titulo: "+quintoLibro.titulo);
+        System.out.println("Autor: "+quintoLibro.autor);
+        System.out.println("Ano de publicacion: "+quintoLibro.anoPublicacion);
+        System.out.println("-------------------");
+
+
 
         }
 }
