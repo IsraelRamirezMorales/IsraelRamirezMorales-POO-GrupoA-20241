@@ -28,7 +28,7 @@ public class Main {
   
     System.out.println("-------------------"); 
 
-    Person fifthPerson= new Person("Daniela",35,true);
+    Person fifthPerson= new Person("Daniel",35,false);
       
     fifthPerson.imprimirDatos();
   
