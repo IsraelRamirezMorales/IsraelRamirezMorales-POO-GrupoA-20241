@@ -3,7 +3,7 @@ package Rectangulo;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Area y perimetro de rectangulos");
+        System.out.println("Area y perimetro de 5 rectangulos");
         System.out.println();
         
         Calculos primerRectangulo= new Calculos(1, 2);

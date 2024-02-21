@@ -2,7 +2,7 @@ package Persona;
 public class Main {
     public static void main(String[] args) {
   
-    System.out.println("Personas y sus atributos");  
+    System.out.println("5 Personas y sus atributos");  
     System.out.println();
     
     Person firstPerson= new Person("Israel",18,false);
