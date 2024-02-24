@@ -10,7 +10,7 @@ package Libro;
 
         System.out.println("Informacion del 1er libro: ");
         
-        System.out.println("Titulo: "+primerLibro.titulo);
+        System.out.println("Titulo:  "+primerLibro.titulo);
         System.out.println("Autor: "+primerLibro.autor);
         System.out.println("Ano de publicacion: "+primerLibro.anoPublicacion);;
         System.out.println();
