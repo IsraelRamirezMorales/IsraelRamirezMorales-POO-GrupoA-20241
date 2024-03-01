@@ -1,66 +1,67 @@
 package Ejercicio;
 
-import java.util.Scanner;
-
 public class Producto {
-    private String name;
+    String name;
     private double price;
     private int stock;
-    public int aumentarStock;
 
-    public Producto(String name,double price, int stock){
+    public Producto(String name, double price, int stock){
         this.name=name;
         this.price=price;
         this.stock=stock;
     }
 
-    public Producto(String name,double price){
+    public Producto(String name, double price){
         this.name=name;
         this.price=price;
-        price=0;
+        this.stock=0;
     }
 
     public double getPrice(){
         return price;
     }
 
-    public void setPrice(){
-        this.price=price;
+    public void setPrice(double price){
+        if (price >= 0) {
+            this.price=price;
+        } else {
+            System.out.println("El precio no puede ser negativo o cero");
+        }
     }
 
     public String getName(){
         return name;
     }
 
-    public void setName(){
-        this.name=name;
+    public void setName(String name){
+        if (name != null && !name.isEmpty()) {
+            this.name=name;
+        } else {
+            System.out.println("El nombre no puede ser nulo o vacío");
+        }
     }
 
-    public double getStock(){
+    public int getStock(){
         return stock;
     }
 
-    public void setStock(){
-        this.stock=stock;
-    }
-
-    public int getAumentarStock(int aumento) {
-        return aumentarStock+aumento;
-    }
-
-    public void setAumentarStock(int aumentarStock) {
-        this.aumentarStock = aumentarStock;
-    }
-
-    String getDisminuirStock(int disminucion) {
-        if (disminucion<stock) {
-            return String.format("%.2f", stock-disminucion);
+    public void setStock(int stock){
+        if (stock >= 0) {
+            this.stock=stock;
         }
-        return "No puede quedar una disminucion negativa";
     }
 
-    public void setDisminuirStock(int aumentarStock) {
-        this.aumentarStock = aumentarStock;
+    public void AumentarStock(int cantidad) {
+        if (cantidad > 0) {
+            this.stock += cantidad;
+        }
     }
-    
+
+    public void DisminuirStock(int cantidad) {
+        if (this.stock < cantidad) {
+            System.out.println("La cantidad de disminución es mayor al stock");
+        } else {
+            this.stock -= cantidad;
+        }
+    }
 }

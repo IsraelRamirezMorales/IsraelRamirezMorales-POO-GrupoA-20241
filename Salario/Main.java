@@ -18,5 +18,8 @@ public class Main {
      
         teacher.setSalary(1000);
         System.out.println(teacher.getSalary()+" Salario modificado");
+    
+    scanner.close();
     }
 }
+
