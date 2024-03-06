@@ -1,31 +1,75 @@
 package Cuenta_bancaria;
 public class BankAccount {
-    private long accountNumber;
-    private double amount=0;
-    private char tipo;
+    private String numeroCuenta;
+    private String tipoCuenta;
+    private double saldo;
 
-    public BankAccount(long accountNumber) {
-        this.accountNumber = accountNumber;
+    public BankAccount(String numeroCuenta, String tipoCuenta, double saldoInicial) {
+        this.numeroCuenta = numeroCuenta;
+        this.tipoCuenta = tipoCuenta;
+        this.saldo = saldoInicial;
     }
 
-    public long getAccountNumber() {
-        return accountNumber;
+    public void agregarDinero(double cantidad) {
+        if (cantidad <= 0) {
+            System.out.println("La cantidad ingresada debe ser mayor que cero.");
+            return;
+        }
+
+        double saldoMaximo = obtenerSaldoMaximo();
+        if (saldo + cantidad > saldoMaximo) {
+            System.out.println("El saldo máximo permitido para la cuenta de tipo " + tipoCuenta + " es $" + saldoMaximo + ".");
+            return;
+        }
+
+        saldo += cantidad;
+        System.out.println("Se agregaron $" + cantidad + " a la cuenta. Nuevo saldo: $" + saldo);
     }
 
-    public double getAmount() {
-        return amount;
+    public void retirarDinero(double cantidad) {
+        if (cantidad <= 0) {
+            System.out.println("La cantidad ingresada debe ser mayor que cero.");
+            return;
+        }
+
+        double saldoMinimo = obtenerSaldoMinimo();
+        if (saldo - cantidad < saldoMinimo) {
+            System.out.println("El saldo mínimo para la cuenta de tipo " + tipoCuenta + " es $" + saldoMinimo + ".");
+            return;
+        }
+
+        saldo -= cantidad;
+        System.out.println("Se retiraron $" + cantidad + " de la cuenta. Nuevo saldo: $" + saldo);
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void verCuenta(String nombreEmpleado) {
+        System.out.println("El número de cuenta del empleado " + nombreEmpleado + " es " + numeroCuenta + ", su saldo es $" + saldo + " y la cuenta es de tipo " + tipoCuenta);
     }
 
-    public double addMoney(double cantidad){
-        return amount+cantidad;
+    private double obtenerSaldoMaximo() {
+        switch (tipoCuenta) {
+            case "A":
+                return 50000;
+            case "B":
+                return 100000;
+            case "C":
+                return Double.MAX_VALUE;
+            default:
+                return 0;
+        }
     }
 
-    public double withdrawMoney(double cantidad){
-        return amount-cantidad;
+    private double obtenerSaldoMinimo() {
+        switch (tipoCuenta) {
+            case "A":
+                return 1000;
+            case "B":
+                return 5000;
+            case "C":
+                return 10000;
+            default:
+                return 0;
+        }
     }
-
 }
+
