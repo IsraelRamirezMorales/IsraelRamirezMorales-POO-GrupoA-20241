@@ -29,5 +29,6 @@ public class Main {
         empleado.agregarDinero(10000);
         empleado.retirarDinero(2000);
         empleado.verCuenta();
+        scanner.close();
     }
 }
