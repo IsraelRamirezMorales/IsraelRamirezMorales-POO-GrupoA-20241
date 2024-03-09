@@ -38,6 +38,6 @@ public class Main {
         }else if(option1==1 && option2==1){
             System.out.println("Salario: "+empleado.calcularSalario(sueldoBase, bonificacion, horasExtras));
         }
-
+        scanner.close();
     }
 }

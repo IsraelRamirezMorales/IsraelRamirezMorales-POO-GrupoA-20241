@@ -16,6 +16,6 @@ public class Main {
 
       System.out.println("Area: "+rectangulo.calcularArea(ancho, altura));
       System.out.println("Perimetro: "+rectangulo.calcularPerimetro(ancho, altura));
-  
+      scanner.close();
     }
   }

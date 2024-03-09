@@ -52,5 +52,6 @@ public class Main {
         }
 
         System.out.println("Impuestos calculados: " + impuestosCalculados);
+        scanner.close();
     }
 }
