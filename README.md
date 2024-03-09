@@ -1,3 +1,4 @@
+
 Tarea 5 Unidad 2
 
 Instrucciones
@@ -17,5 +18,6 @@ _____
     - Si el usuario manda solo los ingresos, retornar ingresos + 0.15
     - Si el usuario manda ventas y porcentajeImpuesto retornar ventas * (porcentajeImpuesto / 100)
     - Si el usuario manda dividendos, porcentajeImpuesto y exención.
-        - Calcular los impuestos = dividendos * (porcentajeImpuesto / 100)
-        - Si los impuestos son mayores que la exención retornar los impuestos menos la exención, sino retornar 0.
+    - Calcular los impuestos = dividendos * (porcentajeImpuesto / 100)
+    - Si los impuestos son mayores que la exención retornar los impuestos menos la exención, sino retornar 0.
+=======
