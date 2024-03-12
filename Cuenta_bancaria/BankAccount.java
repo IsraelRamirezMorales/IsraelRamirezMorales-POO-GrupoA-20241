@@ -32,7 +32,7 @@ public class BankAccount {
         if (this.amount + amount <= 50000) {
             this.amount += amount;
         } else {
-            System.out.println("No puede tener más de 50,000 cuenta A");
+            System.out.println("No puede tener mas de 50,000 cuenta A");
         }
     }
 
@@ -40,7 +40,7 @@ public class BankAccount {
         if (this.amount + amount <= 100000) {
             this.amount += amount;
         } else {
-            System.out.println("No puede tener más de 100,000 cuenta B");
+            System.out.println("No puede tener mas de 100,000 cuenta B");
         }
     }
 
@@ -76,7 +76,7 @@ public class BankAccount {
     }
 
     public String toString() {
-        return "El número de cuenta es " + accountNumber + ", el saldo es $" + amount + " y la cuenta es de tipo " + type;
+        return "El numero de cuenta es " + accountNumber + ", el saldo es $" + amount + " y la cuenta es de tipo " + type;
     }
     
 }
