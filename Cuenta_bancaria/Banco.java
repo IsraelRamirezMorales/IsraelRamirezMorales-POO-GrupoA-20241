@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Banco {
 
+    public static ArrayList<Integer> IDsExistentes = new ArrayList<>();
+
     private ArrayList<Empleado> empleados;
 
     public Banco(ArrayList<Empleado> empleados){

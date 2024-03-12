@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        Banco banco=new Banco(null);
-        
+        Scanner scanner = new Scanner(System.in);
+        Banco banco = new Banco(null);
+
         while (true) {
             System.out.println("\nMenu: ");
             System.out.println("1.- Agregar empleado");
@@ -16,79 +16,81 @@ public class Main {
             System.out.println("5.- Agregar dinero a una cuenta");
             System.out.println("6.- Retirar dinero de una cuenta");
             System.out.println("7.- Salir");
-            int opcion=scanner.nextInt();
+            int opcion = scanner.nextInt();
 
             switch (opcion) {
                 case 1:
-                        agregarEmpleado(banco, scanner);
-                        break;
+                    agregarEmpleado(banco, scanner);
+                    break;
 
-                case 2: 
+                case 2:
 
-                        mostrarTodosEmpleados(banco);
-                        break;
-                    
-                case 3: 
+                    mostrarTodosEmpleados(banco);
+                    break;
 
-                       mostrarEmpleadoEspecifico(banco, scanner);
-                        break;
-                case 4: 
-                        verCuentasEmpleado(banco, scanner);
-                        
-                        break;
+                case 3:
+
+                    mostrarEmpleadoEspecifico(banco, scanner);
+                    break;
+                case 4:
+                    verCuentasEmpleado(banco, scanner);
+
+                    break;
                 case 5:
 
-                        depositarDinero(banco, scanner);
-                        break;
+                    depositarDinero(banco, scanner);
+                    break;
 
-                case 6: 
-                        retirarDinero(banco, scanner);
-                        break;
+                case 6:
+                    retirarDinero(banco, scanner);
+                    break;
 
-                case 7: 
-                
-                        System.exit(0);
-                        break;
+                case 7:
+
+                    System.exit(0);
+                    break;
                 default:
                     break;
             }
         }
-        }
-        
-    private static void agregarEmpleado(Banco banco,Scanner scanner){
-                System.out.println("Ingrese el nombre del empleado: ");
-                scanner.nextLine(); // Consumir la nueva línea pendiente
-                String nombreEmpleado=scanner.nextLine();
-                Empleado empleado=new Empleado(nombreEmpleado);
-                System.out.println("Ingrese el numero de cuentas que quiere para el empleado: ");
-                int numCuentas=scanner.nextInt();
-                for (int i = 0; i < numCuentas; i++) {
-                    System.out.println("Ingrese el numero de cuenta: ");
-                    int accountNumber=scanner.nextInt();
-                    System.out.println("Ingrese el saldo inicial de la cuenta: ");
-                    double amount=scanner.nextDouble();
-                    System.out.println("Ingrese el tipo de cuenta:");
-                    System.out.println("Tipo A: Puede tener maximo $50,000");
-                    System.out.println("Tipo B: Puede tener maximo $100,000");
-                    System.out.println("Tipo C: Puede tener dinero ilimitado");
-                    String type=scanner.next();
+    }
 
-                    if (type.equals("A") || type.equals("B") || type.equals("C") || type.equals("a") || type.equals("b")|| type.equals("c")) {
-                        empleado.agregarCuenta(new BankAccount(accountNumber, type, amount));
-                    }else{ System.out.println("Tipo de cuenta inválido. Se omite esta cuenta.");
-                    continue;
-                }
-                   
-                }
-                banco.agregarEmpleado(empleado);
-    }    
+    private static void agregarEmpleado(Banco banco, Scanner scanner) {
+        System.out.println("Ingrese el nombre del empleado: ");
+        scanner.nextLine(); // Consumir la nueva línea pendiente
+        String nombreEmpleado = scanner.nextLine();
+        Empleado empleado = new Empleado(nombreEmpleado);
+        System.out.println("Ingrese el numero de cuentas que quiere para el empleado: ");
+        int numCuentas = scanner.nextInt();
+        for (int i = 0; i < numCuentas; i++) {
+            System.out.println("Ingrese el numero de cuenta: ");
+            int accountNumber = scanner.nextInt();
+            System.out.println("Ingrese el saldo inicial de la cuenta: ");
+            double amount = scanner.nextDouble();
+            System.out.println("Ingrese el tipo de cuenta:");
+            System.out.println("Tipo A: Puede tener maximo $50,000");
+            System.out.println("Tipo B: Puede tener maximo $100,000");
+            System.out.println("Tipo C: Puede tener dinero ilimitado");
+            String type = scanner.next();
+
+            if (type.equals("A") || type.equals("B") || type.equals("C") || type.equals("a") || type.equals("b")
+                    || type.equals("c")) {
+                empleado.agregarCuenta(new BankAccount(accountNumber, type, amount));
+            } else {
+                System.out.println("Tipo de cuenta inválido. Se omite esta cuenta.");
+                continue;
+            }
+
+        }
+        banco.agregarEmpleado(empleado);
+    }
 
     private static void mostrarTodosEmpleados(Banco banco) {
         System.out.println("Información de todos los empleados:");
         for (Empleado emp : banco.getEmpleados()) {
             System.out.println("Nombre: " + emp.getName());
         }
-    
+
     }
 
     public static void mostrarEmpleadoEspecifico(Banco banco, Scanner scanner) {
@@ -111,7 +113,7 @@ public class Main {
 
     public static void verCuentasEmpleado(Banco banco, Scanner scanner) {
         System.out.print("Ingrese el nombre del empleado: ");
-        scanner.nextLine(); 
+        scanner.nextLine();
         String name = scanner.nextLine();
         Empleado empleado = null;
         for (Empleado emp : banco.getEmpleados()) {
@@ -153,11 +155,10 @@ public class Main {
             if (emp.getName().equals(nombre)) {
                 return emp;
             }
-            
+
         }
         return null;
     }
-
 
     public static void retirarDinero(Banco banco, Scanner scanner) {
         System.out.print("Ingrese el nombre del empleado: ");
@@ -169,7 +170,7 @@ public class Main {
         double montoRetiro = scanner.nextDouble();
         Empleado empleado = buscarEmpleadoPorNombre(banco, nombreRetiro);
         if (empleado != null) {
-         BankAccount account = empleado.getAccountPorNumero(numeroCuentaRetiro);
+            BankAccount account = empleado.getAccountPorNumero(numeroCuentaRetiro);
             if (account != null) {
                 account.retirarDinero(montoRetiro);
             } else {
@@ -179,5 +180,18 @@ public class Main {
             System.out.println("Empleado no encontrado.");
         }
     }
-   
+
+    public static boolean esNumUnico(Scanner scanner, int accountNumber) {
+        boolean flag = true;
+        for (Integer i : Banco.IDsExistentes) {
+            if (accountNumber == i) {
+                flag = false;
+                break;
+            } else {
+                Banco.IDsExistentes.add(accountNumber);
+                flag = true;
+            }
+        }
+        return flag;
+    }
 }
