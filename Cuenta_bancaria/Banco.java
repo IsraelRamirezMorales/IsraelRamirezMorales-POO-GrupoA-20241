@@ -3,7 +3,6 @@ package Cuenta_bancaria;
 import java.util.ArrayList;
 
 public class Banco {
-    
 
     private ArrayList<Empleado> empleados;
 
@@ -18,8 +17,6 @@ public class Banco {
     public ArrayList<Empleado> getEmpleados() {
         return empleados;
     }
-
-
 
     }
 

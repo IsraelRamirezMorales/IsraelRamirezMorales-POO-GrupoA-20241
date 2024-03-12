@@ -2,9 +2,7 @@ package Cuenta_bancaria;
 
 import java.util.Scanner;
 
-
 public class Main {
-
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         Banco banco=new Banco(null);
@@ -85,7 +83,6 @@ public class Main {
                 banco.agregarEmpleado(empleado);
     }    
 
-    
     private static void mostrarTodosEmpleados(Banco banco) {
         System.out.println("Información de todos los empleados:");
         for (Empleado emp : banco.getEmpleados()) {
@@ -114,7 +111,7 @@ public class Main {
 
     public static void verCuentasEmpleado(Banco banco, Scanner scanner) {
         System.out.print("Ingrese el nombre del empleado: ");
-        scanner.nextLine(); // Consumir la nueva línea pendiente
+        scanner.nextLine(); 
         String name = scanner.nextLine();
         Empleado empleado = null;
         for (Empleado emp : banco.getEmpleados()) {
