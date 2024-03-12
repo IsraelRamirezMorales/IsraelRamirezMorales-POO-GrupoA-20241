@@ -7,6 +7,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Banco banco = new Banco(null);
 
+
+        //hola ando desde intelliJ
         while (true) {
             System.out.println("\nMenu: ");
             System.out.println("1.- Agregar empleado");
