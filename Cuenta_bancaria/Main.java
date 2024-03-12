@@ -8,7 +8,9 @@ public class Main {
         Banco banco = new Banco(null);
 
 
-        //hola ando desde intelliJ
+        //uwu
+
+        //prueba 2 intellij
         while (true) {
             System.out.println("\nMenu: ");
             System.out.println("1.- Agregar empleado");

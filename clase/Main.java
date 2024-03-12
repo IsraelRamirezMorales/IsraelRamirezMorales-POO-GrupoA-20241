@@ -1,5 +1,0 @@
-package clase;
-
-public class Main {
-    
-}
