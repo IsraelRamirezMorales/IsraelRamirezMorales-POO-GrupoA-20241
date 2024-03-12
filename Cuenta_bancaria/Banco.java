@@ -2,13 +2,13 @@ package Cuenta_bancaria;
 
 import java.util.ArrayList;
 
-
 public class Banco {
+    
 
     private ArrayList<Empleado> empleados;
 
-    public Banco() {
-        this.empleados = new ArrayList<>();
+    public Banco(ArrayList<Empleado> empleados){
+        this.empleados=new ArrayList<>();
     }
 
     public void agregarEmpleado(Empleado empleado) {
@@ -19,6 +19,7 @@ public class Banco {
         return empleados;
     }
 
-        
+
+
     }
-}
+

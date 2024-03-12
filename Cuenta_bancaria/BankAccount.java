@@ -23,8 +23,8 @@ public class BankAccount {
     }
 
     public void agregarDinero(double amount) {
-        if (type == "A" || type=="a") agregarDineroA(amount);
-        else if (type == "B" || type=="b") agregarDineroB(amount);
+        if (type.equals("A") || type.equals("a")) agregarDineroA(amount);
+        else if (type.equals("B") || type.equals("b")) agregarDineroB(amount);
         else this.amount += amount;
     }
 
@@ -44,9 +44,9 @@ public class BankAccount {
         }
     }
 
-    private void retirarDinero(double amount){
-        if (type=="A" || type=="a") retirarDineroA(amount);
-        else if (type=="B" || type=="b") retirarDineroB(amount);
+    public void retirarDinero(double amount){
+        if (type.equals("A") || type.equals("a")) retirarDineroA(amount);
+        else if (type.equals("B") || type.equals("b")) retirarDineroB(amount);
         else retirarDineroC(amount);
     }
    
