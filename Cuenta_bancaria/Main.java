@@ -61,7 +61,7 @@ public class Main {
 
     private static void agregarEmpleado(Banco banco, Scanner scanner) {
         System.out.println("Ingrese el nombre del empleado: ");
-        scanner.nextLine(); // Consumir la nueva línea pendiente
+        scanner.nextLine(); // Consumir la nueva línea pendiente.
         String nombreEmpleado = scanner.nextLine();
         Empleado empleado = new Empleado(nombreEmpleado);
         System.out.println("Ingrese el numero de cuentas que quiere para el empleado: ");

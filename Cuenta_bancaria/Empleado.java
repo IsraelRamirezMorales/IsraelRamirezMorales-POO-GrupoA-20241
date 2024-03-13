@@ -3,7 +3,7 @@
 import java.util.ArrayList;
 
 public class Empleado{
-    
+    //s
     private String name;
     private ArrayList<BankAccount> cuentas;
 
