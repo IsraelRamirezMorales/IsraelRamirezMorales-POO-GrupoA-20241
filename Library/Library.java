@@ -8,7 +8,7 @@ public class Library{
     public Library(){
     }
 
-    public static  void addUser(){
+    public  void addUser(){
         System.out.println("Ingresa el nombre del usuario: ");
         String name=scanner.next();
         System.out.println("Ingresa la edad del usuario: ");
@@ -18,7 +18,7 @@ public class Library{
         System.out.println("El usuario fue agregado correctamente!");
     }
 
-    public static void  deleteUser(){
+    public  void  deleteUser(){
         if (userList.isEmpty()){
             System.out.println("No hay empleados registrados!");
         }else{
@@ -32,7 +32,7 @@ public class Library{
         }
     }
 
-    public static void addBook(){
+    public void addBook(){
         System.out.println("Ingrese el titulo del libro: ");
         String title=scanner.next();
         System.out.println("Ingrese el autor del libro: ");
@@ -42,7 +42,7 @@ public class Library{
         System.out.println("El libro fue agregado correctamente!");
     }
 
-    public static void deleteBook(){
+    public  void deleteBook(){
         if (bookList.isEmpty()){
             System.out.println("No hay ningun libro registrado");
         }else {
@@ -55,7 +55,7 @@ public class Library{
     }
 
 
-    public static void rentBook(){
+    public void rentBook(){
         if(userList.isEmpty() || bookList.isEmpty()){
             System.out.println("No hay usuarios o libros para rentar!");
         }
@@ -82,7 +82,7 @@ public class Library{
         }
     }
 
-    public static void returnBook(){
+    public  void returnBook(){
         if(bookList.isEmpty()){
             System.out.println("No hay libros registrados");
         }
@@ -110,7 +110,7 @@ public class Library{
         }
     }
 
-    public  static void showUserList(){
+    public   void showUserList(){
         if(userList.isEmpty()){
             System.out.println("No hay usuarios registrados");
         }
@@ -132,7 +132,7 @@ public class Library{
         }
     }
 
-    public static void showUserData(){
+    public  void showUserData(){
         if(userList.isEmpty()){
             System.out.println("No hay usuarios registrados!");
         }
@@ -159,7 +159,7 @@ public class Library{
 
         }
     }
-    public static void showBookList(){
+    public  void showBookList(){
         if(bookList.isEmpty()){
             System.out.println("No hay libros registrados");
         }
@@ -178,7 +178,7 @@ public class Library{
         }
     }
 
-    public static void showActiveUsers(){
+    public  void showActiveUsers(){
         if(userList.isEmpty()){
             System.out.println("No hay usuarios registrados");
         }
@@ -193,7 +193,7 @@ public class Library{
         }
     }
 
-    public static void showActiveBooks(){
+    public  void showActiveBooks(){
         if(bookList.isEmpty()){
             System.out.println("No hay libros registrados");
         }
@@ -213,7 +213,7 @@ public class Library{
         }
     }
 
-    public static void showInactiveBooks(){
+    public  void showInactiveBooks(){
         if(bookList.isEmpty()){
             System.out.println("No hay libros registrados");
         }
@@ -235,7 +235,7 @@ public class Library{
 
 
 
-    private static void showUserNames(){
+    private  void showUserNames(){
         System.out.println("Estos son los ID disponibles");
         System.out.println("----------------------------------");
         for (User user : userList) {
@@ -245,7 +245,7 @@ public class Library{
         }
     }
 
-    private static int getUserIndex(){
+    private  int getUserIndex(){
         int verification = -1;
         showUserNames();
         System.out.println("Ingrese el ID del usuario");
@@ -260,7 +260,7 @@ public class Library{
         return verification;
     }
 
-    private static boolean validUserIndex(int i){
+    private  boolean validUserIndex(int i){
         if(i == -1){
             return false;
         }
@@ -270,7 +270,7 @@ public class Library{
     }
 
 
-    private static void showBookTitles(){
+    private  void showBookTitles(){
         System.out.println("Estos son los ID disponibles");
         System.out.println("----------------------------------");
         for (Book book : bookList) {
@@ -280,7 +280,7 @@ public class Library{
         }
     }
 
-    private static void showBookTitles(int i){
+    private  void showBookTitles(int i){
         System.out.printf("Estos son los ID disponibles para el usuario: %s", userList.get(i).getName());
         System.out.println("----------------------------------");
         for (Book book : userList.get(i).getBookList()) {
@@ -289,7 +289,7 @@ public class Library{
         }
     }
 
-    private static int getBookIndex(){
+    private  int getBookIndex(){
         int verification = -1;
         showBookTitles();
         System.out.println("Ingresa el ID del libro");
@@ -304,7 +304,7 @@ public class Library{
         return verification;
     }
 
-    private static int getBookIndex(int i){
+    private  int getBookIndex(int i){
         int verification = -1;
         showBookTitles(i);
         System.out.println("Ingresa el ID del libro");
@@ -319,7 +319,7 @@ public class Library{
         return verification;
     }
 
-    private static boolean validBookIndex(int i){
+    private  boolean validBookIndex(int i){
         if(i == -1){
             return false;
         }

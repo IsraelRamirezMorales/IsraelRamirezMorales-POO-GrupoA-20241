@@ -12,53 +12,53 @@ public class Main {
 
             switch (opt) {
                 case 1:
-                    Library.addUser();
+                    library.addUser();
                     break;
 
                 case 2:
-                    Library.deleteUser();
+                    library.deleteUser();
                     break;
 
                 case 3:
-                    Library.addBook();
+                    library.addBook();
                     break;
 
                 case 4:
-                    Library.deleteBook();
+                    library.deleteBook();
                     break;
 
                 case 5:
-                    Library.rentBook();
+                    library.rentBook();
 
                     break;
 
                 case 6:
-                    Library.returnBook();
+                    library.returnBook();
                     break;
 
                 case 7:
-                    Library.showUserData();
+                    library.showUserData();
 
                     break;
 
                 case 8:
-                    Library.showUserList();
+                    library.showUserList();
                     break;
 
                 case 9:
-                    Library.showBookList();
+                    library.showBookList();
                     break;
 
                 case 10:
-                    Library.showActiveUsers();
+                    library.showActiveUsers();
                     break;
 
                 case 11:
-                    Library.showActiveBooks();
+                    library.showActiveBooks();
                     break;
 
                 case 12:
-                    Library.showInactiveBooks();
+                    library.showInactiveBooks();
                     break;
 
                 default:
@@ -68,7 +68,7 @@ public class Main {
 
         }
 
-
+        sc.close();
     }
 
     public static void showOptions(){
