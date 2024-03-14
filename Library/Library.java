@@ -115,7 +115,7 @@ public class Library{
             System.out.println("No hay usuarios registrados");
         }
         else{
-            System.out.println(" -------------INFORMACION DE LOS USUARIOS------------- ");
+            System.out.println(" -------------INFORMACION DE LOS USUARIOS REGISTRADOS------------- ");
             for (User user : userList) {
                 System.out.printf("\n | NOMBRE: %s | EDAD: %s | ID: %s |",user.getName(), user.getAge(), user.getID());
                 if(user.getBookList().isEmpty()){
