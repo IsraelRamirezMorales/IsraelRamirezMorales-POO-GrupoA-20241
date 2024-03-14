@@ -245,7 +245,7 @@ public class Library{
         }
     }
 
-    private static int getUserIndex(){//PROBAR QUE SE INGRESEN 2 CON EL MISMO NOMBRE Y SER CAPAZ DE DISTINGUIRLOS POR ID
+    private static int getUserIndex(){
         int verification = -1;
         showUserNames();
         System.out.println("Ingrese el ID del usuario");
@@ -280,7 +280,7 @@ public class Library{
         }
     }
 
-    private static void showBookTitles(int i){//i ES PARA EL USUARIO
+    private static void showBookTitles(int i){
         System.out.printf("Estos son los ID disponibles para el usuario: %s", userList.get(i).getName());
         System.out.println("----------------------------------");
         for (Book book : userList.get(i).getBookList()) {
@@ -289,7 +289,7 @@ public class Library{
         }
     }
 
-    private static int getBookIndex(){//PROBAR QUE SE INGRESEN 2 CON EL MISMO NOMBRE Y SER CAPAZ DE DISTINGUIRLOS POR ID
+    private static int getBookIndex(){
         int verification = -1;
         showBookTitles();
         System.out.println("Ingresa el ID del libro");
@@ -304,7 +304,7 @@ public class Library{
         return verification;
     }
 
-    private static int getBookIndex(int i){//
+    private static int getBookIndex(int i){
         int verification = -1;
         showBookTitles(i);
         System.out.println("Ingresa el ID del libro");
